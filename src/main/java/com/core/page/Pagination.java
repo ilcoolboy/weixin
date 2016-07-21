@@ -23,7 +23,6 @@ public class Pagination<E> extends AbstractPage<E> {
         return getLastPageNum() <= getPageNum();
     }
 
-    @Override
     public int getLastPageNum() {
         return this.totalPageCount;
     }

@@ -50,7 +50,6 @@ public class SpringContextFactory implements ApplicationContextAware{
 		 return getWebSpringContext(servletContext).getBean(beanKey);
 	 }
 	 
-	@Override
 	public void setApplicationContext(ApplicationContext arg0)throws BeansException {
 		ctx = arg0;
 	}

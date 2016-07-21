@@ -263,7 +263,7 @@ public class WxApiCtrl {
 		MpAccount mpAccount = WxMemoryCacheClient.getSingleMpAccount();//获取缓存中的唯一账号
 		if(num != null){
 			byte[] qrcode = WxApiClient.createQRCode(60,num,mpAccount);//有效期60s
-			String url = UploadUtil.byteToImg(request.getServletContext().getRealPath("/"), qrcode);
+			String url = UploadUtil.byteToImg(request.getRealPath("/"), qrcode);
 			mv.addObject("qrcode", url);
 		}
 		mv.addObject("num", num);

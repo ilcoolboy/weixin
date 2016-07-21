@@ -10,7 +10,6 @@ public class SpringBeanDefineConfigue implements ApplicationListener<ContextRefr
 	/**
 	 * 当一个ApplicationContext被初始化或刷新触发
 	 */
-	@Override
 	public void onApplicationEvent(ContextRefreshedEvent event) {
 		if(event.getApplicationContext().getDisplayName().equals("Root WebApplicationContext")){
 			if(appService != null){

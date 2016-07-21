@@ -15,12 +15,10 @@ public abstract class AbstractPage<E> implements Page<E> {
     protected boolean firstPage;
     
 
-    @Override
     public int getFirstPageNum() {
         return DEFAULT_FIRST_PAGE_NUM;
     }
 
-    @Override
     public int getPageSize() {
         return pageSize;
     }
@@ -29,7 +27,6 @@ public abstract class AbstractPage<E> implements Page<E> {
         this.pageSize = pageSize;
     }
 
-    @Override
     public int getPageNum() {
         return pageNum;
     }
@@ -39,7 +36,6 @@ public abstract class AbstractPage<E> implements Page<E> {
         this.pageNum = pageNum;
     }
 
-    @Override
     public List<E> getItems() {
         return items;
     }
@@ -51,13 +47,11 @@ public abstract class AbstractPage<E> implements Page<E> {
         this.firstPage = (getPageNum() <= getFirstPageNum());
     }
 
-    @Override
     public boolean isFirstPage() {
     	firstPage = (getPageNum() <= getFirstPageNum());
     	return firstPage;
     }
 
-    @Override
     public boolean isLastPage() {
         return lastPage;
     }
@@ -86,7 +80,6 @@ public abstract class AbstractPage<E> implements Page<E> {
         return isLastPage() ? getPageEndIndex() : getPageEndIndex() + 1;
     }
 
-    @Override
     public Iterator<E> iterator() {
         return this.items.iterator();
     }
@@ -96,7 +89,6 @@ public abstract class AbstractPage<E> implements Page<E> {
         return "Page[" + this.getPageNum() + "]:" + items.toString();
     }
 
-    @Override
     public boolean isEmpty() {
         return items.isEmpty();
     }
